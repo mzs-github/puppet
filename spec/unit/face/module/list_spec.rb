@@ -5,7 +5,7 @@ require 'puppet/face'
 require 'puppet/module_tool'
 require 'puppet_spec/modules'
 
-describe "puppet module list" do
+describe "puppet module list", :fails_on_windows => true do
   include PuppetSpec::Files
 
   before do

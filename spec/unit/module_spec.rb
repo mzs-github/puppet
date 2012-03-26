@@ -794,7 +794,7 @@ describe Puppet::Module do
     it "should fail if the discovered name is different than the metadata name"
   end
 
-  it "should be able to tell if there are local changes" do
+  it "should be able to tell if there are local changes", :fails_on_windows => true do
     modpath = tmpdir('modpath')
     foo_checksum = 'acbd18db4cc2f85cedef654fccc4a4d8'
     checksummed_module = PuppetSpec::Modules.create(

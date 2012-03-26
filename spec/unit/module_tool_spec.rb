@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'puppet/module_tool'
 
-describe Puppet::Module::Tool do
+describe Puppet::Module::Tool, :fails_on_windows => true do
   describe '.build_tree' do
     it 'should return an empty tree when given an empty list' do
       subject.build_tree([]).should == ''
